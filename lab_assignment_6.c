@@ -8,12 +8,11 @@ int search(int numbers[], int low, int high, int value)
 		int middle = low + (high - low) / 2;
 
 		if (numbers[middle] == value)
-		//printf("middle is equal to value\n");
 			return middle;
 
 		if (numbers[middle] < value)
-		//printf("middle less than value\n");
 			low = middle + 1;
+			
 		else
 			high = middle - 1;
 
