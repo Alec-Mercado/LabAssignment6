@@ -1,11 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int search(int numbers[], int low, int high, int value) 
 {
+	while (low <= high)
+	{
+		int middle = low + (high - low) / 2;
+
+		if (numbers[middle] == value)
+		//printf("middle is equal to value\n");
+			return middle;
+
+		if (numbers[middle] < value)
+		//printf("middle less than value\n");
+			low = middle + 1;
+		else
+			high = middle - 1;
+
+	}
 	return -1;
 
-
-	
 }
 
 void printArray(int numbers[], int sz)
